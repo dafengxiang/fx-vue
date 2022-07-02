@@ -5,6 +5,9 @@
   "repository": "https://github.com/dafengxiang/fx-vue.git",
   "author": "dafengxiang <1205679862@qq.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
   "devDependencies": {
     "@types/jest": "^28.1.4",
     "jest": "^28.1.2",
