@@ -10,6 +10,14 @@ class ReactiveEffect {
   }
 }
 
+
+// targetMap结构伪代码
+// targetMap = {
+//   {age: 10}: {
+//     age: [ReactiveEffect1, ReactiveEffect2]
+//   }
+// }
+
 const targetMap = new Map()
 export function track(target, key) {
   let depsMap = targetMap.get(target)
