@@ -5,6 +5,9 @@ const set = createSetter()
 const readonlyGet = createGetter(true)
 function createGetter(isReadonly = false) {
   return function get(target, key) {
+    if (key === 'is_reactive') {
+      return !isReadonly
+    }
     const res = Reflect.get(target, key)
     // 依赖收集
     if (!isReadonly) {
