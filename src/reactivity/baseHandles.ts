@@ -31,6 +31,7 @@ export const mutableHandles = {
 export const readonlyHandles = {
   get: readonlyGet,
   set(target, key, value) {
+    console.warn('只读属性，不可修改')
     return true
   }
 }

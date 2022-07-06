@@ -11,7 +11,10 @@ describe('readonly', () => {
     const user = readonly({
       age: 10
     })
+
+    // 测试技术点mock
     console.warn = jest.fn()
+    
     user.age = 11
     expect(console.warn).toBeCalledTimes(1)
   })
