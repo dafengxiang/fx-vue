@@ -14,7 +14,7 @@ export function readonly(raw) {
 }
 
 export function isReactive(value) {
-  return value[ReactiveFlags.IS_REACTIVE]
+  return !!value[ReactiveFlags.IS_REACTIVE]
 }
 
 function createActiveObject(raw: any, baseHandles) {
